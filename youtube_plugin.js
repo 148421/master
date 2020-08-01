@@ -14,11 +14,11 @@ function YoutubePlugin () {
 YoutubePlugin.prototype.respond = function (query, channel, bot) {
 	this.youtube.search(query, 1, function(error, result) {
 			if (error) {
-				channel.send("¯\\_(ツ)_/¯");
+				channel.send("¯\_(ツ)_/¯");
 			}
 			else {
 				if (!result || !result.items || result.items.length < 1) {
-					channel.send("¯\\_(ツ)_/¯");
+					channel.send("¯\_(ツ)_/¯");
 				} else {
 					channel.send("http://www.youtube.com/watch?v=" + result.items[0].id.videoId );
 				}
